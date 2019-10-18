@@ -1,4 +1,4 @@
-package main
+package models
 
 type Book struct {
 	// The main identifier for the Book. This will be unique.
@@ -10,4 +10,4 @@ type Book struct {
 
 // A map to store the books with the ISDN as the key
 // This acts as the storage in lieu of an actual database
-var bookstore = make(map[string]*Book)
+var Bookstore = make(map[string]*Book)

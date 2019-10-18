@@ -1,4 +1,4 @@
-package main
+package responses
 
 type JsonResponse struct {
 	// Reserved field to add some meta information to the API response

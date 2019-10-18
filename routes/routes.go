@@ -1,6 +1,9 @@
-package main
+package routes
 
-import "github.com/julienschmidt/httprouter"
+import (
+	"github.com/julienschmidt/httprouter"
+	"github.com/walshbm15/go-rest-api/handlers"
+)
 
 /*
 Define all the routes here.
@@ -18,10 +21,10 @@ type Routes []Route
 
 func AllRoutes() Routes {
 	routes := Routes{
-		Route{"Index", "GET", "/", Index},
-		Route{"BookIndex", "GET", "/books", BookIndex},
-		Route{"Bookshow", "GET", "/books/:isdn", BookShow},
-		Route{"Bookshow", "POST", "/books", BookCreate},
+		Route{"Index", "GET", "/", handlers.Index},
+		Route{"BookIndex", "GET", "/books", handlers.BookIndex},
+		Route{"Bookshow", "GET", "/books/:isdn", handlers.BookShow},
+		Route{"Bookshow", "POST", "/books", handlers.BookCreate},
 	}
 	return routes
 }
